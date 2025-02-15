@@ -1,0 +1,16 @@
+<div class="book-grid">
+    <div class="book-card" *ngFor="let book of books">
+        <img [src]="book.small_image_url" alt="{{book.title}}">
+        <h3>{{book.title}}</h3>
+        <p><strong>Author: </strong>{{book.authors}}</p>
+        <p><strong>Year Published: </strong>{{book.original_publication_year}}</p>
+        <p><strong>Rating: </strong>🌟{{book.average_rating}}</p>
+    </div>
+</div>
+
+<!--Pagination control-->
+<div class="pagination">
+    <button (click)="goToPage(currentPage - 1)" [disabled]="currentPage===1">Previous</button>
+    <span>Page {{currentPage}}</span>
+    <button (click)="goToPage(currentPage + 1)" [disabled]="currentPage * itemsPerPage >= totalItem">Next</button>
+</div>
