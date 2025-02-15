@@ -1,0 +1,17 @@
+<div class="movie-grid">
+    <div class="movie-card" *ngFor="let film of movies">
+        <h3>{{film.title}}</h3>
+        <p><strong>Directed By: </strong>{{film.director}}</p>
+        <p><strong>Release Year: </strong>{{film.release_year}}</p>
+        <hr>
+        <p>{{film.description}}</p>
+        <hr>
+        <p>📺{{film.type}}</p>
+
+    </div>
+</div>
+<div class="pagination">
+    <button (click)="goToPage(currentPage-1)" [disabled]="currentPage===1">Previous</button>
+    <span>page: {{currentPage}}</span>
+    <button (click)="goToPage(currentPage+1)" [disabled]="currentPage*itemPerPage >= totalItem">Next</button>
+</div>

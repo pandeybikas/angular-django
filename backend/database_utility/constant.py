@@ -1,3 +1,5 @@
 import os
 
 BOOK_TABLE= os.getenv("MAIN_BOOK_TBL")
+MOVIES_TABLE=os.getenv("MOVIES_TBL")
+YOUTUBE_TABLE=os.getenv("YOUTUBE_VIDEO_TBL")
