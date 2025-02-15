@@ -1,0 +1,2 @@
+# angular-django
+taask manger
