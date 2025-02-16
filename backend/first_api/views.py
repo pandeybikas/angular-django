@@ -27,7 +27,7 @@ class AllProjectView(ViewSet):
     @action(detail=False, methods=['get'], url_path='top_youtube_videos')
     def get_top_youtube_videos(self, request):
         data= self.access_layer.fetch_top_youtube_videos()
-        data= data.dropna()
+      
         response= data.to_dict(orient='records')
         return JsonResponse(response, safe=False)
 

@@ -1,0 +1,21 @@
+<div class="video-grid">
+    <div class="video-card" *ngFor="let video of videos">
+        <img [src]="video.thumbnail_link" alt="{{video.title}}">
+        <h3>{{video.title}}</h3>
+        <p><strong>🎥</strong>{{video.channel_title}}</p>
+        <hr>
+        <div class="video-info">
+            <p>👍{{video.likes}}</p>
+            <p>👁️{{video.views}}</p>
+           
+        </div>
+        <hr>
+        <p>📍{{video.publish_time}}</p>
+
+    </div>
+</div>
+<div class="pagination">
+    <button (click)="getNextPage(currentPage - 1)" [disabled]="currentPage===1">Previous</button>
+    <span>page {{currentPage}}</span>
+    <button (click)="getNextPage(currentPage + 1)" [disabled]="currentPage*itemPerPage >= totalItem">Next</button>
+</div>
