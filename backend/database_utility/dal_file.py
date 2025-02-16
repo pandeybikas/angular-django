@@ -48,6 +48,7 @@ class FetchAllQueriesFromDb(DataBaseUtility):
                         likes, 
                         thumbnail_link 
                     from {table_name};
+                    
                     """
         df= self.execute_query(query)
         return df
