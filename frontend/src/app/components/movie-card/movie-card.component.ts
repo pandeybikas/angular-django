@@ -1,5 +1,5 @@
 import { Component,OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 
 interface Movies{
@@ -14,7 +14,7 @@ interface Movies{
 }
 @Component({
   selector: 'app-movie-card',
-  imports: [CommonModule],
+  imports: [CommonModule,HttpClientModule],
   templateUrl: './movie-card.component.html',
   styleUrl: './movie-card.component.css'
 })

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 
 interface Book{
@@ -11,7 +11,7 @@ interface Book{
 }
 @Component({
   selector: 'app-book-card',
-  imports: [CommonModule],
+  imports: [CommonModule,HttpClientModule],
   templateUrl: './book-card.component.html',
   styleUrl: './book-card.component.css'
 })
